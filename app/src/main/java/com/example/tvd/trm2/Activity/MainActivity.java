@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity
         TabLayout tbl_pages= (TabLayout) findViewById(R.id.tbl_pages);
         tbl_pages.setupWithViewPager(vp_pages);
 
-
-
         /*setSupportActionBar(toolbar);*/
 
 
