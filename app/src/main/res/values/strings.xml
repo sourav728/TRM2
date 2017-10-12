@@ -13,4 +13,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="login_role">
+        <item>--SELECT--</item>
+        <item>AEE</item>
+        <item>AAO</item>
+        <item>ADMIN</item>
+        <item>MR</item>
+        <item>SO</item>
+    </string-array>
 </resources>

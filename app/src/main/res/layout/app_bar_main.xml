@@ -12,23 +12,26 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <!--<android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+        <include
+            android:id="@+id/login_toolbar"
+            layout="@layout/toolbar" />
         <android.support.design.widget.TabLayout
-            android:background="@color/colorPrimary"
-            app:tabSelectedTextColor="#ffffff"
-            app:tabIndicatorColor="#FFFFFF"
-            app:tabIndicatorHeight="3dp"
-            app:tabTextColor="#FFFFFF"
+            android:id="@+id/tbl_pages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="fixed"
+            android:background="@color/colorPrimary"
             app:tabGravity="fill"
-            android:id="@+id/tbl_pages"/>
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#ffffff"
+            app:tabTextColor="#FFFFFF" />
 
     </android.support.design.widget.AppBarLayout>
 
