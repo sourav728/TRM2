@@ -1,43 +1,45 @@
 package com.example.tvd.trm2.Activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Spinner;
 
-import com.example.tvd.trm2.Fragments.Billing;
-import com.example.tvd.trm2.Fragments.Collections;
-import com.example.tvd.trm2.Fragments.Reports;
-import com.example.tvd.trm2.Fragments.Settings;
 import com.example.tvd.trm2.R;
+import com.example.tvd.trm2.Values.GetSetValues;
+import com.example.tvd.trm2.adapter.Adapters;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    String[] rolelist;
+    Spinner userroleview;
+    String main_role = "";
+    ArrayList<GetSetValues> userrolelist;
+    GetSetValues getset;
+    Adapters.Roleadapter userroleadapter;
+    Adapters adapters;
+    ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);*/
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);*/
 
-        ViewPager vp_pages= (ViewPager) findViewById(R.id.vp_pages);
+      /*  ViewPager vp_pages= (ViewPager) findViewById(R.id.vp_pages);
         PagerAdapter pagerAdapter=new FragmentAdapter(getSupportFragmentManager());
         vp_pages.setAdapter(pagerAdapter);
 
         TabLayout tbl_pages= (TabLayout) findViewById(R.id.tbl_pages);
-        tbl_pages.setupWithViewPager(vp_pages);
+        tbl_pages.setupWithViewPager(vp_pages);*/
 
         /*setSupportActionBar(toolbar);*/
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         /*ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -47,11 +49,18 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        //intializeUserPassWordView();
+
     }
 
+    /*public void intializeUserPassWordView()
+    {
+        progress = new ProgressDialog(MainActivity.this, AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+
+    }*/
 
 
-    public class FragmentAdapter extends FragmentPagerAdapter {
+  /*  public class FragmentAdapter extends FragmentPagerAdapter {
 
         public FragmentAdapter(FragmentManager fm) {
             super(fm);
@@ -98,9 +107,7 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
-
-
-
+*/
 
     @Override
     public void onBackPressed() {
@@ -158,4 +165,9 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    /*public void switch_content(Fragment fragment)
+    {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.container, fragment).addToBackStack(null).commit();
+    }*/
 }

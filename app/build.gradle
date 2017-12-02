@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.example.tvd.trm2"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -29,5 +29,22 @@ dependencies {
     compile 'com.android.support:cardview-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:26.+'
+    compile 'me.spark:submitbutton:1.0.1'
+    compile 'com.google.android.gms:play-services-ads:11.0.4'
     testCompile 'junit:junit:4.12'
+    compile files('libs/achartengine-1.1.0.jar')
+    compile files('libs/AnalogicsDecrypter.jar')
+    compile files('libs/AnalogicsMultilingual_BT_Printer_3T_API_1_1.jar')
+    compile files('libs/CM_FileEncryptDecrypt.jar')
+    compile files('libs/common-lang3.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-net-20030211.160026.jar')
+    compile files('libs/ftp4j-1.7.2.jar')
+    compile files('libs/ksoap2-android-assembly-3.3.0-jar-with-dependencies.jar')
+    compile files('libs/ngx_btp120_320_sdk_1.0.4.jar')
+    compile files('libs/OnBarcode.AndroidBarcode.jar')
+    compile files('libs/opencv_library-2.4.3.jar')
+    compile files('libs/org-apache-commons-codec.jar')
+    compile files('libs/printerlibs.jar')
+    compile files('libs/zip4j_1.3.2.jar')
 }
